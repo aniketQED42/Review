@@ -1,0 +1,4 @@
+type: module
+name: Review Tasks.
+description: Review Module.
+core: '8.x'

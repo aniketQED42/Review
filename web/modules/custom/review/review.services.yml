@@ -1,0 +1,7 @@
+services:
+  # review.route_subscriber:
+  #   class: Drupal\review\Services\RouteSubscriber
+  #   tags:
+  #     - { name: event_subscriber }
+  clockservice:
+    class: Drupal\review\Services\ClockService

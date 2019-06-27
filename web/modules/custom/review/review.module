@@ -1,0 +1,42 @@
+<?php
+/* 
+        Hook to get the ID of the current form
+ * /
+// function review_form_alter(&$form, $form_state, $form_id) {
+// drupal_set_message($form_id);
+// }
+
+
+/**
+   * Implementation of hook_form_alter().
+   *
+   * The function is named modulename_form_alter.
+*/
+//   function review_form_alter(&$form, $form_state, $form_id) {      
+//     switch ($form_id) {      
+//       case 'system_site_information_settings':        
+// 		$form['submit'] = array(
+//   		'#type' => 'submit',
+//   		'#value' => t('Submit'),
+//         );
+//      break;
+//   }
+// }
+
+
+function review_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id == 'system_site_information_settings') {
+      $form['extended_siteinfo_extra_setting'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Enter the API ID Key'),
+      );
+    }
+    switch ($form_id) {      
+              case 'system_site_information_settings':        
+        		$form['submit'] = array(
+          		'#type' => 'submit',
+          		'#value' => t('Submit'),
+                );
+             break;
+          }
+  }

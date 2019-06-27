@@ -1,0 +1,4 @@
+review.settings:
+  path: '/node/{nodeid}/{apikey}'
+  defaults:
+    controller: 'Drupal\review\Controller\CustomController::nodeobject'
